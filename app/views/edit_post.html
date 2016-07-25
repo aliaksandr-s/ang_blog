@@ -1,0 +1,33 @@
+<form ng-submit="addNewPost(post)">
+  <div class="form-group">
+    <label for="post-title">Post title</label>
+    <input type="text" ng-model="post.title" class="form-control" id="post-title" required>
+  </div>
+  <div class="form-group">
+    <label for="post-text">Post text</label>
+    <textarea class="form-control" ng-model="post.text" rows="8" id="post-text" required></textarea>
+  </div>
+  <div class="form-group">
+    <label for="post-image">Post image</label>
+    <input type="file" id="post-image" ng-model="post.image">
+    <div class="alert alert-danger help-block hidden" id="ImageErrorMessage" role="alert">Not an image!</div>
+    <img id="imagePreview" class="img-responsive help-block" src="{{post.image}}" alt="image" />
+  </div>
+  <button type="submit" class="btn btn-default" ng-click="update(post)">Save</button>
+  <br>
+  <br>
+</form>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        Saved
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+      </div>
+    </div>
+  </div>
+</div>

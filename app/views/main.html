@@ -1,0 +1,10 @@
+<div class="row marketing">
+  <div class="post" dir-paginate="item in items | orderBy:'':true | itemsPerPage: pageSize" current-page="currentPage">
+    <h3><a href="#/{{item.id}}">{{item.title}}</a></h3>
+    <p>{{item.text | limitTo: 250}}...</p>
+  </div>
+</div>
+
+<div class="text-center">
+  <dir-pagination-controls auto-hide></dir-pagination-controls>
+</div>

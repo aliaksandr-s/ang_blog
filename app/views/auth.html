@@ -1,0 +1,18 @@
+<div class="container">
+  <div ng-show="showAuthWarning" class="alert alert-danger">
+    <strong>Please authorize to edit messages!</strong>
+  </div>
+  <form name="myForm" class="form-signin" ng-submit="authUser(user)">
+    <h2 class="form-signin-heading">Please log in</h2>
+    <label for="inputText" class="sr-only">Login</label>
+    <input ng-model="user.username" type="text" id="inputText" class="form-control" placeholder="Login" required autofocus>
+    <label for="inputPassword" class="sr-only">Password</label>
+    <input ng-model="user.password" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+    <div ng-show="warning" class="alert alert-danger">
+      <strong>Data is incorrect!</strong> Please try again
+    </div>
+    <button ng-disabled="myForm.$invalid" class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+  </form>
+  <!-- <button ng-click="logout()" class="btn btn-lg btn-default btn-block">Log out</button> -->
+</div>
+<!-- /container -->
