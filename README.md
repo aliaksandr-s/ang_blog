@@ -4,8 +4,8 @@
 
 ## Install and run deployd server
 
-`npm install deployd -g`
-`cd dpd_sever`
+`npm install deployd -g` <br />
+`cd dpd_sever` <br />
 `dpd`
 
 ## Build & development
